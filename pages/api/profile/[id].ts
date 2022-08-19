@@ -15,8 +15,11 @@ export default async function handler(
     const query = singleUserQuery(id);
 
     const user = await client.fetch(query);
-    const userVideos = userCreatedPostsQuery(id);
-    const userLikedVideos = userLikedPostsQuery(id);
+    const userVideosQuery = userCreatedPostsQuery(id);
+    const userLikedVideosQuery = userLikedPostsQuery(id);
+
+    const userVideos = await client.fetch(userVideosQuery);
+    const userLikedVideos = await client.fetch(userLikedVideosQuery);
 
     res.status(200).json({
       user: user[0],
