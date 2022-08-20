@@ -9,7 +9,7 @@ interface IProps {
 const NoResults = ({ text }: IProps) => {
   return (
     <div className="flex flex-col justify-center items-center h-full w-full">
-      <p className="text-8xl">
+      <p className="text-8xl yoo">
         {text === "No Comments yet!" ? (
           <BiCommentX />
         ) : (
