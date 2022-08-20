@@ -24,6 +24,7 @@ export default async function handler(
       .setIfMissing({ comments: [] })
       .insert("after", "comments[-1]", [
         {
+          comment,
           _key: uuid(),
           postedBy: { _type: "postedBy", _ref: userId },
         },

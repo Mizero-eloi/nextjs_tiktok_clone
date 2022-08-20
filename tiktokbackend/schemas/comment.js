@@ -11,7 +11,7 @@ export default {
     {
       name: "comment",
       title: "Comment",
-      type: "text",
+      type: "string",
     },
   ],
 };
